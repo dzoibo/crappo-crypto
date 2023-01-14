@@ -26,6 +26,7 @@
 }
 
 .big-size, #trade-section span, #check-section div:first-child, #why-section #why-section-text div:nth-child(1), #stat-section .stat-item-amount {
+  font-family: "Rubik", sans-serif;
   font-size: 40px;
   line-height: 60px;
   font-weight: 700;
@@ -39,11 +40,11 @@
 
 body {
   color: white;
-  padding-top: 60px;
   position: relative;
 }
 
 #first-page {
+  padding-top: 60px;
   padding-left: 6vw;
   padding-right: 6vw;
   background-color: #0D0D2B;
@@ -291,7 +292,6 @@ nav ul {
 
 #trade-section {
   text-align: center;
-  margin-bottom: 100px;
   font-family: "Rubik", sans-serif;
   display: flex;
   flex-direction: column;
@@ -301,6 +301,7 @@ nav ul {
   background-color: #f9fafd;
 }
 #trade-section #currency-container {
+  margin-bottom: 100px;
   width: 100%;
   padding-inline: 6vw;
   margin-top: 64px;
@@ -328,14 +329,6 @@ nav ul {
 }
 #trade-section .currency-logo i {
   font-size: xx-large;
-}
-#trade-section #btc {
-  background-color: white;
-  border-radius: 50%;
-}
-#trade-section #btc i {
-  color: #f89c2d;
-  font-size: 80px;
 }
 #trade-section #eth {
   border-radius: 50%;
@@ -399,6 +392,16 @@ nav ul {
 }
 #trade-section .start-button-activated .start-button i {
   font-size: small;
+}
+
+#market-section {
+  padding-top: 100px;
+}
+#market-section h3 {
+  margin-bottom: 100px;
+}
+#market-section #invest-smart-section {
+  display: flex;
 }
 
 /*# sourceMappingURL=crappos.css.map */
