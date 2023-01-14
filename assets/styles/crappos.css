@@ -1,6 +1,17 @@
-.mmm {
-  color: red;
-  border: 1px solid red;
-}
+/* Error: expected "{".
+ *     ,
+ * 310 |     linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
+ *     |                                                      ^
+ *     '
+ *   assets\styles\crappos.scss 310:54  root stylesheet */
 
-/*# sourceMappingURL=crappos.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a     \2577 \a 310 \2502      linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);\d\a     \2502                                                       ^\a     \2575 \a   assets\\styles\\crappos.scss 310:54  root stylesheet';
+}
