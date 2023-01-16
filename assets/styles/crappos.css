@@ -365,7 +365,7 @@ nav li:hover {
 #trade-section .currency-name .currency-symbol {
   margin-left: 8px;
   margin-top: 8px;
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 18px;
   color: rgb(189, 189, 189);
 }
@@ -418,6 +418,7 @@ nav li:hover {
 }
 #market-section #invest-smart-section {
   display: flex;
+  margin-bottom: 250px;
 }
 #market-section .market-section-explanation {
   text-align: left;
@@ -437,13 +438,13 @@ nav li:hover {
   position: relative;
 }
 #market-section #figure-header {
-  align-items: flex-start;
+  margin-bottom: 24px;
 }
 #market-section #figure-header #bitcoin-section {
   display: flex;
   width: 155px;
 }
-#market-section #figure-header #btc-img {
+#market-section #figure-header #btc-img img {
   width: 40px;
   height: 40px;
 }
@@ -462,6 +463,7 @@ nav li:hover {
   font-weight: 600;
   color: rgb(207, 207, 207);
   margin-left: 5px;
+  margin-top: 5px;
 }
 #market-section #figure-header #btc-value div:nth-child(2) {
   color: #F2F2F2;
@@ -496,9 +498,13 @@ nav li:hover {
   font-weight: 700;
   margin-bottom: 16px;
   font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #market-section #progress-percent div:nth-child(2) i {
-  font-size: small;
+  font-size: large;
+  margin-left: 7px;
   color: #FD8589;
 }
 #market-section #progress-percent div:nth-child(3) {
@@ -510,18 +516,17 @@ nav li:hover {
   position: absolute;
   bottom: -41px;
   right: 78px;
-  max-width: 169px;
   height: 84px;
   background-color: #491F98;
   padding: 16px 32px 16px 32px;
 }
 #market-section #price div:nth-child(1) {
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 4px;
 }
 #market-section #price div:nth-child(3) {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 16px;
 }
 
