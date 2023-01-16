@@ -21,6 +21,9 @@
     height: 100%;
     object-fit: contain;
 }
+.neutral-gray{
+    color:#e0e0e0 !important;
+}
 .big-size{
     font-family: 'Rubik', sans-serif;
     font-size:40px ;
@@ -31,6 +34,11 @@
     border-radius: 32px;
     padding: 14px 32px 14px 32px;
     background-color: #3671E9;
+}
+.learn-more-button{
+    @extend .button;
+    margin-top: 32px;
+    width: 146px;
 }
 $global-padding:6vw;
 body{
@@ -76,12 +84,20 @@ nav{
         cursor: pointer
          
     }
+    li:hover{
+        color:#3671E9;
+    }
 }
 #login-section{
     @extend .flex-center;
     margin-left: 56px;
     width: 222px;
     height: 52px;
+    div:nth-child(1){
+        &:hover{
+            color:#3671E9;
+        }
+    }
     .separator{
         height: 24px;
         border-left: 1px solid rgba(242, 242, 242, 0.5);
@@ -166,7 +182,6 @@ nav{
 #first-rectangle{
     position: absolute;
     bottom: -150px;
-    transform: rotate(45);
 }
 #stat-section{
     font-family: 'Rubik', sans-serif;
@@ -194,6 +209,10 @@ nav{
         margin-bottom: 4px;
         @extend .big-size;
     }
+    .stat-item-desc{
+        @extend .neutral-gray;
+        @extend .small-rubik
+    }
 }
 
 #why-section{
@@ -209,11 +228,6 @@ nav{
         div:nth-child(1){
             @extend .big-size;
             margin-bottom: 24px;
-        }
-        div:nth-child(3){
-            @extend .button;
-            margin-top: 32px;
-            width: 146px;
         }
     }
 }
@@ -425,11 +439,129 @@ nav{
     
 }
 #market-section{
+    padding-left: 6vw;
+    background-color: #2B076E;
     padding-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
     h3{
         margin-bottom: 100px;
+        max-width: 758px;
     }
     #invest-smart-section{
         display: flex;
     }
+    .market-section-explanation{
+        text-align: left;
+        div:nth-child(2){
+                @extend .small-rubik;
+                max-width: 408px;
+                margin-top: 24px;
+    
+        }
+    }
+    #invest-smart-section-figure{
+        font-family: 'Inter', sans-serif;
+        padding: 40px;
+        background-color: #35068C;
+        height: 298px;
+        max-width: 580px;
+        margin-left: 146px;
+        border-radius: 16px;
+        position: relative;
+    }
+    #figure-header{
+        @extend .flex-space;
+        align-items: flex-start;
+        #bitcoin-section{
+            display: flex;
+            width: 155px;
+        }
+        #btc-img{
+            width: 40px ;
+            height: 40px;
+        }
+        #btc-value{
+            margin-left: 16px;
+            text-align: left;
+            div:nth-child(1){
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 4px;
+                display: flex;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: rgba(207, 207, 207, 1);
+                    margin-left: 5px;
+                }
+            }
+            div:nth-child(2){
+                color:#F2F2F2;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        #percent{
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(66, 255, 255, 1);
+        }
+
+    }
+    #graphiq-image{
+        max-width: 500px;
+        height: 136px;
+    }
+
+    #progress-percent{
+        border-radius: 16px;
+        position: absolute;
+        left: 64px;
+        bottom: -126px;
+        height: 184px;
+        max-width: 178px;
+        background-color: #491F98;
+        padding: 24px 16px 24px 16px;;
+        div:nth-child(1){
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        div:nth-child(2){
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 24px;
+            i{
+                font-size: small;
+                color:#FD8589;
+            }
+        }
+        div:nth-child(3){
+            font-weight: 400px;
+            font-size: 16px;
+        }
+    }
+    #price{
+        border-radius: 16px;
+        position: absolute;
+        bottom: -41px;
+        right:78px;
+        max-width: 169px;
+        height: 84px;
+        background-color: #491F98;
+        padding: 16px 32px 16px 32px;
+        div:nth-child(1){
+            font-weight: 700px;
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        div:nth-child(3){
+            font-weight: 400px;
+            font-size: 16px;
+        }
+    }
+
 }
