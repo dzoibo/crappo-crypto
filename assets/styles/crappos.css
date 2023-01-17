@@ -530,4 +530,11 @@ nav li:hover {
   font-size: 16px;
 }
 
+#detailed-statistics-section {
+  display: flex;
+}
+#detailed-statistics-section #detailled-statistic-figure-header {
+  display: flex;
+}
+
 /*# sourceMappingURL=crappos.css.map */
