@@ -19,7 +19,7 @@
 .illustration-img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
 }
 .neutral-gray{
     color:#e0e0e0 !important;
@@ -575,7 +575,162 @@ nav{
 }
 #detailed-statistics-section{
     display: flex;
+    .detailed-statistics-session{
+        margin-left: 91px;
+    }
+    #detailed-statistics-section-figure{
+        position: relative;
+        max-width: 710px;
+    }
     #detailled-statistic-figure-header{
+        padding-right: 100px;
+        text-align: left;
+        justify-content: space-between;
         display: flex;
+        align-items: center;
+        background-color: #35068C;
+        border-radius: 0px 16px 16px 0px;
+        width: 100%;
+        padding: 16px 16px 16px 16px;
+        height: 100px;
+        margin-bottom: 16px;
+        #trends{
+            display: flex;
+            #trends-icon{
+                margin-right: 10px;
+                height: 24px;
+                width: 24px;
+                font-size: small;
+                @extend .flex-center;
+                border-radius: 50%;
+                background-color: #361f98;
+                color: #42ffff;
+                margin-top: -2px;
+            }
+            #trends-percent{
+                div:nth-child(1){
+                    font-family: 'Rubik',sans-serif;
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+                span{
+                    font-weight: 500;
+                    color: #42ffff;
+                }
+                div:nth-child(2){
+                    @extend .small-rubik;
+                    font-size: 14px;
+                }
+            }
+        }
+        .detailled-statistic-item{
+            div:nth-child(1){
+                font-weight: 500;
+                font-family: 'Rubik',sans-serif;
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            div:nth-child(2){
+                @extend .small-rubik;
+                font-size: 14px;
+                color:#e0e0e0;
+            }
+        }
+        #avatar-section{
+            display: flex;
+            align-items: center;
+            font-weight: 700 !important;
+            #avatar{
+                margin-top: 8px;
+                width: 65px ;
+                height: 65px;
+                border-radius: 50%;
+                margin-right: 16px;
+                img{
+                    border-radius: 50%;
+                }
+            }
+            #avatar-name{
+                font-size: 28px;
+                font-family: 'Inter',sans-serif;
+                div:nth-child(2){
+                    color: #6edcb5;
+                }
+            }
+        }
+    }
+    #detailed-statistics-figure-header-2{
+        text-align: left;
+        padding: 24px 24px 16px 24px;
+        padding-top: 24px;
+        padding-right: 24px;
+        @extend .flex-space;
+        background-color: #35068C;
+        border-radius: 0px 16px 0px 0px ;
+        #symbol{
+            display: flex;
+            align-items: center;
+            div:nth-child(1){
+                font-size: 18px;
+                margin-right: 10px;
+                font-weight: 700;
+            }
+            div:nth-child(2){
+                height: 24px;
+                width: 24px;
+                font-size: small;
+                @extend .flex-center;
+                border-radius: 50%;
+                background-color: #361f98;
+            }
+        }
+        #buy-sell-button{
+            @extend .flex-space;
+            div{
+                @extend .button;
+                font-size: 16px !important;
+            }
+            div:nth-child(1){
+                background-color: #6edcb5;
+                margin-right: 24px;
+            }
+            div:nth-child(2){
+                background-color: #ff325f;
+            } 
+        }
+    }
+    #detailed-statistics-figure{
+        background-color: #35068C;
+        padding:0px 24px 0px 16px ;
+        width: 100%;
+        height: 350px;
+        img{
+            object-fit:fill;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    #last-price{
+        margin-right: 50px ;
+    }
+    .detailed-statistics-figure-header-2-item{
+        
+        font-family: 'Rubik',sans-serif;
+        position: relative;
+        div:nth-child(1){
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        div:nth-child(2){
+            @extend .neutral-gray;
+            font-size: 14px;
+        } 
+        div:nth-child(3){
+            color: #42ffff;
+            top: 50%;
+            left: 80px;
+            position:absolute;
+            transform: translateY(-50%) ;
+        } 
     }
 }
