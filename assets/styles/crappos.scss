@@ -583,13 +583,14 @@ nav{
         max-width: 710px;
     }
     #detailled-statistic-figure-header{
+        
         padding-right: 100px;
+        border-radius: 0px 16px 16px 0px;
         text-align: left;
         justify-content: space-between;
         display: flex;
         align-items: center;
         background-color: #35068C;
-        border-radius: 0px 16px 16px 0px;
         width: 100%;
         padding: 16px 16px 16px 16px;
         height: 100px;
@@ -624,6 +625,7 @@ nav{
             }
         }
         .detailled-statistic-item{
+            
             div:nth-child(1){
                 font-weight: 500;
                 font-family: 'Rubik',sans-serif;
@@ -635,26 +637,26 @@ nav{
                 font-size: 14px;
                 color:#e0e0e0;
             }
-        }
-        #avatar-section{
-            display: flex;
-            align-items: center;
-            font-weight: 700 !important;
-            #avatar{
-                margin-top: 8px;
-                width: 65px ;
-                height: 65px;
-                border-radius: 50%;
-                margin-right: 16px;
-                img{
+            &:nth-child(5){
+                display: flex;
+                align-items: center;
+                font-weight: 700 !important;
+                #avatar{
+                    margin-top: 8px;
+                    width: 65px ;
+                    height: 65px;
                     border-radius: 50%;
+                    margin-right: 16px;
+                    img{
+                        border-radius: 50%;
+                    }
                 }
-            }
-            #avatar-name{
-                font-size: 28px;
-                font-family: 'Inter',sans-serif;
-                div:nth-child(2){
-                    color: #6edcb5;
+                #avatar-name{
+                    font-size: 28px;
+                    font-family: 'Inter',sans-serif;
+                    div:nth-child(2){
+                        color: #6edcb5;
+                    }
                 }
             }
         }
@@ -732,5 +734,67 @@ nav{
             position:absolute;
             transform: translateY(-50%) ;
         } 
+    }
+}
+
+#grow-profit-section{
+    border-radius: 16px;
+    #grow-profit-section-figure{
+        background-color: #35068C;
+        border-radius:16px;
+    }
+}
+
+#subscribe-section{
+    background-color: #3671E9;
+    height: 216px;
+    width: 1200px;
+    padding: 48px;
+    text-align: left;
+    border-radius: 16px;
+    @extend .flex-space;
+    #subscribe-now-section{
+        max-width: 348px;
+        div:nth-child(1){
+            @extend .big-size;
+            font-size: 32px !important;
+            margin-bottom: 16px;
+        }
+        div:nth-child(2){
+            @extend .small-rubik;
+        }
+    }
+    
+    input::placeholder{
+        @extend .small-rubik;
+        padding-left: 0px;
+        color: white;
+    }
+    input{
+        caret-color: white;
+        @extend .small-rubik;
+        color: white;
+        width: 375px;
+        border: none;
+        border-bottom:1px solid rgba(224, 224, 224, 1);
+        padding-bottom: 8px;
+        outline: none;
+        background-color: transparent;
+    }
+    #subscribe-button{
+        @extend .flex-space;
+        max-width: 556px;
+        div {
+            margin-left: 40px;
+            width: 152px;
+            height: 55px;
+            background-color: white;
+            color: black;
+            padding: 14px 32px 14px 32px;
+            border-radius: 32px;
+            font-weight: 500;
+            font-size: 18px;
+            font-family: 'Rubik',sans-serif;
+        }
     }
 }

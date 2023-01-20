@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.flex-space, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, #logo, header, .flex-center, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-space, #subscribe-section #subscribe-button, #subscribe-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, #logo, header, .flex-center, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@
   justify-content: center !important;
 }
 
-.small-rubik, #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-percent div:nth-child(2), #market-section .market-section-explanation div:nth-child(2), #stat-section .stat-item-desc, #reduction, #navigation {
+.small-rubik, #subscribe-section input, #subscribe-section input::placeholder, #subscribe-section #subscribe-now-section div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-percent div:nth-child(2), #market-section .market-section-explanation div:nth-child(2), #stat-section .stat-item-desc, #reduction, #navigation {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -29,7 +29,7 @@
   color: #e0e0e0 !important;
 }
 
-.big-size, #trade-section span, #check-section div:first-child, #why-section #why-section-text div:nth-child(1), #stat-section .stat-item-amount {
+.big-size, #subscribe-section #subscribe-now-section div:nth-child(1), #trade-section span, #check-section div:first-child, #why-section #why-section-text div:nth-child(1), #stat-section .stat-item-amount {
   font-family: "Rubik", sans-serif;
   font-size: 40px;
   line-height: 60px;
@@ -542,12 +542,12 @@ nav li:hover {
 }
 #detailed-statistics-section #detailled-statistic-figure-header {
   padding-right: 100px;
+  border-radius: 0px 16px 16px 0px;
   text-align: left;
   justify-content: space-between;
   display: flex;
   align-items: center;
   background-color: #35068C;
-  border-radius: 0px 16px 16px 0px;
   width: 100%;
   padding: 16px 16px 16px 16px;
   height: 100px;
@@ -588,26 +588,26 @@ nav li:hover {
   font-size: 14px;
   color: #e0e0e0;
 }
-#detailed-statistics-section #detailled-statistic-figure-header #avatar-section {
+#detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) {
   display: flex;
   align-items: center;
   font-weight: 700 !important;
 }
-#detailed-statistics-section #detailled-statistic-figure-header #avatar-section #avatar {
+#detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar {
   margin-top: 8px;
   width: 65px;
   height: 65px;
   border-radius: 50%;
   margin-right: 16px;
 }
-#detailed-statistics-section #detailled-statistic-figure-header #avatar-section #avatar img {
+#detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar img {
   border-radius: 50%;
 }
-#detailed-statistics-section #detailled-statistic-figure-header #avatar-section #avatar-name {
+#detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar-name {
   font-size: 28px;
   font-family: "Inter", sans-serif;
 }
-#detailed-statistics-section #detailled-statistic-figure-header #avatar-section #avatar-name div:nth-child(2) {
+#detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar-name div:nth-child(2) {
   color: #6edcb5;
 }
 #detailed-statistics-section #detailed-statistics-figure-header-2 {
@@ -675,6 +675,59 @@ nav li:hover {
   left: 80px;
   position: absolute;
   transform: translateY(-50%);
+}
+
+#grow-profit-section {
+  border-radius: 16px;
+}
+#grow-profit-section #grow-profit-section-figure {
+  background-color: #35068C;
+  border-radius: 16px;
+}
+
+#subscribe-section {
+  background-color: #3671E9;
+  height: 216px;
+  width: 1200px;
+  padding: 48px;
+  text-align: left;
+  border-radius: 16px;
+}
+#subscribe-section #subscribe-now-section {
+  max-width: 348px;
+}
+#subscribe-section #subscribe-now-section div:nth-child(1) {
+  font-size: 32px !important;
+  margin-bottom: 16px;
+}
+#subscribe-section input::placeholder {
+  padding-left: 0px;
+  color: white;
+}
+#subscribe-section input {
+  caret-color: white;
+  color: white;
+  width: 375px;
+  border: none;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  padding-bottom: 8px;
+  outline: none;
+  background-color: transparent;
+}
+#subscribe-section #subscribe-button {
+  max-width: 556px;
+}
+#subscribe-section #subscribe-button div {
+  margin-left: 40px;
+  width: 152px;
+  height: 55px;
+  background-color: white;
+  color: black;
+  padding: 14px 32px 14px 32px;
+  border-radius: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
 }
 
 /*# sourceMappingURL=crappos.css.map */
