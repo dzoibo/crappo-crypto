@@ -3,13 +3,13 @@
   box-sizing: border-box;
 }
 
-.flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #grow-profit-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   justify-content: center !important;
 }
 
@@ -425,6 +425,8 @@ nav li:hover {
 }
 #market-section .market-section-explanation {
   text-align: left;
+  max-width: 454px;
+  line-height: 28px;
 }
 #market-section .market-section-explanation div:nth-child(2) {
   max-width: 408px;
@@ -681,11 +683,100 @@ nav li:hover {
 }
 
 #grow-profit-section {
+  position: relative;
   border-radius: 16px;
+  width: 100%;
+  margin-top: 129px;
+  margin-bottom: 129px;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 #grow-profit-section #grow-profit-section-figure {
+  width: 610px;
+  font-family: "Inter", sans-serif;
+  padding: 40px 0px 40px 0px;
   background-color: #35068C;
   border-radius: 16px;
+}
+#grow-profit-section .grow-profit-section-figure-stat {
+  line-height: 19.36px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0px 16px 0px;
+  border: 1px solid red;
+}
+#grow-profit-section .grow-profit-section-figure-stat:nth-child(2) {
+  width: 100%;
+  padding: 16px 0px 16px 10px;
+  background-color: #4610AD;
+  border-radius: 16px;
+  margin-left: -72px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  align-items: center;
+}
+#grow-profit-section .grow-profit-section-figure-logo {
+  display: flex;
+  align-items: center;
+}
+#grow-profit-section .grow-profit-section-figure-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#grow-profit-section .grow-profit-section-figure-logo .logo-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#grow-profit-section .grow-profit-section-figure-logo .logo-container i {
+  font-size: x-large;
+}
+#grow-profit-section .grow-profit-section-figure-logo .eth-container {
+  background-color: #6374C3;
+}
+#grow-profit-section .grow-profit-section-figure-logo .ltc-container {
+  background-color: #59C19C;
+}
+#grow-profit-section .grow-profit-section-figure-logo .currency-name {
+  text-align: left;
+  font-weight: 700;
+  margin-left: 16px;
+  font-size: 32px;
+}
+#grow-profit-section .grow-profit-section-figure-logo .currency-name div {
+  color: #F2F2F2;
+  font-weight: 100 !important;
+  font-size: 16px;
+  margin-top: 8px;
+}
+#grow-profit-section .carret-container {
+  display: flex;
+  align-items: center;
+  color: #8FFFBE;
+}
+#grow-profit-section .carret-container div {
+  margin-right: 8px;
+  background-color: rgba(143, 255, 190, 0.1);
+  width: 16px;
+  height: 16px;
+  font-size: x-small;
+  border-radius: 50%;
+}
+#grow-profit-section .danger {
+  color: #FF7676 !important;
+}
+#grow-profit-section .danger div {
+  background-color: rgba(255, 118, 118, 0.1) !important;
+}
+#grow-profit-section .currency-details {
+  text-align: left;
+  margin-bottom: 14px;
+}
+#grow-profit-section .currency-details span {
+  display: block !important;
+  margin-bottom: 40px;
 }
 
 #subscribe-section-container {

@@ -459,6 +459,8 @@ nav{
     }
     .market-section-explanation{
         text-align: left;
+        max-width: 454px;
+        line-height: 28px;
         div:nth-child(2){
                 @extend .small-rubik;
                 max-width: 408px;
@@ -741,10 +743,107 @@ nav{
 }
 
 #grow-profit-section{
+    position: relative;
     border-radius: 16px;
+    @extend .flex-space;
+    width: 100%;
+    margin-top: 129px;
+    margin-bottom: 129px;
+    padding-left: 120px;
+    padding-right: 120px;
+    
     #grow-profit-section-figure{
+        width: 610px;
+        font-family: 'Inter',sans-serif;
+        padding: 40px 0px 40px 0px;
         background-color: #35068C;
         border-radius:16px;
+    }
+    .grow-profit-section-figure-stat{
+        line-height: 19.36px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 16px 0px 16px 0px;
+        border: 1px solid red;
+        &:nth-child(2){
+            width: 100%;
+            padding: 16px 0px 16px 10px;
+            background-color: #4610AD;
+            border-radius: 16px;
+            margin-left: -72px;
+            margin-bottom: 24px;
+            margin-top: 24px;
+            align-items: center;
+        }
+    }
+ 
+    .grow-profit-section-figure-logo{
+        display: flex;
+        align-items: center;
+        img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .logo-container{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            @extend .flex-center;
+        
+        i{
+            font-size: x-large;
+        }
+        
+     }
+     .eth-container{
+        background-color: #6374C3;
+     }
+     .ltc-container{
+         background-color: #59C19C; 
+      }
+        .currency-name{
+            text-align: left;
+            font-weight: 700;
+            margin-left: 16px;
+            font-size: 32px;
+            div{
+                color:#F2F2F2;
+                font-weight: 100 !important;
+                font-size: 16px;
+                margin-top: 8px;
+            }
+        }
+    }
+    .carret-container{
+        display: flex;
+        align-items: center;
+        color: #8FFFBE;
+        div{
+            margin-right: 8px;
+            background-color: rgba(143, 255, 190,0.1);
+            @extend .flex-center;
+            width: 16px;
+            height: 16px;
+            font-size: x-small;
+            border-radius: 50%;
+        }
+    }
+
+    .danger{
+        color: #FF7676 !important;
+        div{
+            background-color: rgba(255, 118, 118,0.1) !important;
+        }
+    }
+    .currency-details{
+        text-align: left;
+        margin-bottom: 14px;
+        span{
+            display: block !important;
+            margin-bottom: 40px;
+        }
     }
 }
 
