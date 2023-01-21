@@ -3,13 +3,13 @@
   box-sizing: border-box;
 }
 
-.flex-space, #subscribe-section #subscribe-button, #subscribe-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, #logo, header, .flex-center, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.flex-center, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   justify-content: center !important;
 }
 
@@ -25,7 +25,7 @@
   object-fit: fill;
 }
 
-.neutral-gray, #detailed-statistics-section .detailed-statistics-figure-header-2-item div:nth-child(2), #stat-section .stat-item-desc {
+.neutral-gray, footer .footer-item-list div, #detailed-statistics-section .detailed-statistics-figure-header-2-item div:nth-child(2), #stat-section .stat-item-desc {
   color: #e0e0e0 !important;
 }
 
@@ -37,6 +37,7 @@
 }
 
 .button, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button div, #trade-section .start-button-activated, #try-button, #login-section div:nth-child(3), .learn-more-button {
+  cursor: pointer;
   border-radius: 32px;
   padding: 14px 32px 14px 32px;
   background-color: #3671E9;
@@ -63,13 +64,13 @@ header {
   width: 100%;
 }
 
-#logo {
+.logo {
   height: 40px;
   width: 135px;
   font-family: "Inter", sans-serif;
   font-size: 18px;
 }
-#logo div:nth-child(1) {
+.logo div:nth-child(1) {
   width: 40px;
   height: 40px;
 }
@@ -89,6 +90,7 @@ nav ul {
 }
 nav li:hover {
   color: #3671E9;
+  cursor: pointer;
 }
 
 #login-section {
@@ -98,6 +100,7 @@ nav li:hover {
 }
 #login-section div:nth-child(1):hover {
   color: #3671E9;
+  cursor: pointer;
 }
 #login-section .separator {
   height: 24px;
@@ -685,6 +688,13 @@ nav li:hover {
   border-radius: 16px;
 }
 
+#subscribe-section-container {
+  height: 392px;
+  width: 100%;
+  padding: 88px 120px 88px 120px;
+  background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+}
+
 #subscribe-section {
   background-color: #3671E9;
   height: 216px;
@@ -728,6 +738,61 @@ nav li:hover {
   font-weight: 500;
   font-size: 18px;
   font-family: "Rubik", sans-serif;
+}
+
+footer {
+  margin: 0px !important;
+  padding: 80px 120px 80px 120px;
+  background-color: #0D0D2B;
+  font-family: "Rubik", sans-serif;
+  text-align: left;
+}
+footer > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-item-list {
+  width: 200px;
+}
+footer .footer-item-list:nth-child(2) {
+  margin-right: -200px;
+}
+footer .footer-item-list h6 {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 30px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+footer .footer-item-list div {
+  margin-bottom: 16px;
+}
+footer .footer-item-list div :hover {
+  color: #3671E9;
+  cursor: pointer;
+}
+footer #payment-section {
+  font-weight: 500;
+  font-size: 32px;
+  width: 355px;
+}
+footer #payment-section #payment-mode {
+  margin-top: 40PX;
+}
+footer #payment-section #payment-mode div {
+  width: 96px;
+  height: 84px;
+  border-radius: 16px;
+  background-color: #181834;
+}
+footer .footer-social-media {
+  margin-top: 120px;
+}
+footer .footer-social-media div:nth-child(2) {
+  width: 150px;
+}
+footer .footer-social-media i {
+  color: white;
 }
 
 /*# sourceMappingURL=crappos.css.map */
