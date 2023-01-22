@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Rubik:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #grow-profit-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #grow-profit-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #trade-section #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #trade-section #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
+.flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #trade-section #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #stat-section .stat-item, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   justify-content: center !important;
 }
 
@@ -54,9 +57,10 @@ body {
 }
 
 #first-page {
+  overflow-x: hidden;
   padding-top: 60px;
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
   background-color: #0D0D2B;
 }
 
@@ -80,11 +84,15 @@ header {
 }
 
 nav {
-  width: 339px;
+  margin-left: 20px;
+  width: clamp(280px, 339px, 30vw);
   height: 52px;
   margin-right: 55px;
+  display: flex;
+  align-items: center;
 }
 nav ul {
+  width: 100%;
   list-style-type: none;
   cursor: pointer;
 }
@@ -170,15 +178,36 @@ nav li:hover {
 }
 
 #illustration {
-  width: 604px;
-  height: 585px;
+  width: 65vw;
+  min-width: 500px;
+  height: auto;
+  max-height: 585px;
   margin-top: 51px;
   margin-left: 8px;
 }
+#illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
 
 #first-rectangle {
+  max-width: 50vw;
   position: absolute;
   bottom: -150px;
+}
+#first-rectangle img {
+  object-fit: fill;
+}
+
+#second-rectangle {
+  max-width: 50vw;
+  position: absolute;
+  right: -150px;
+  bottom: -50px;
+}
+#second-rectangle img {
+  object-fit: fill;
 }
 
 #stat-section {
@@ -224,98 +253,113 @@ nav li:hover {
 }
 
 #check-section {
-  width: 100%;
+  margin-bottom: 210px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #check-section div:first-child {
   margin-bottom: 24px;
 }
-
-#card {
-  margin-bottom: -216px;
-  position: relative;
-  max-width: 942px;
-  width: 70vw;
-  margin-top: 64px;
-  background-color: white;
-  font-family: "Rubik", sans-serif;
-  border-radius: 16px;
-  box-shadow: 0 20 2000 rgba(57, 23, 119, 0.05);
-  filter: 0px 20px 200px rgba(57, 23, 119, 0.05);
-}
-#card #input-section {
-  padding: 48px;
-}
-#card #input-section input {
-  padding-bottom: 8px;
-  max-width: 403px;
-  border: none;
-  outline: 0;
-  border-bottom: 1px solid rgb(224, 224, 224);
-  width: 30.66vw;
-  font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  color: black;
-}
-#card #input-section input::placeholder {
-  font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  color: black;
-}
-#card #input-section select {
-  max-width: 200px;
-  width: 12.73vh;
-  padding-bottom: 8px;
-  border: none;
-  outline: 0;
-  width: 30.66vw;
-  font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  border-bottom: 1px solid rgb(224, 224, 224);
-}
-#card #input-section div:nth-child(3) {
-  max-width: 147px;
-  height: 59px;
-}
-#card #estimation-section {
-  padding: 48px;
-  text-align: left;
-}
-#card #estimation-section div {
-  margin-bottom: 16px;
-}
-#card #estimation-section div:nth-child(1) {
-  color: #3671E9;
-  font-weight: 500;
-  font-size: 16px;
-}
-#card #estimation-section div:nth-child(2) {
-  font-weight: 700;
-  font-size: 32px;
-  color: black;
-}
-#card #estimation-section div:nth-child(2) span {
-  color: #3671E9;
-}
-#card #estimation-section div:nth-child(3) {
-  font-size: 16px;
-  color: rgb(130, 130, 130);
+#check-section div:nth-child(2) {
+  width: 35vw;
 }
 
 #trade-section {
+  position: relative;
+  z-index: 2;
   text-align: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
   font-family: "Rubik", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 316px;
   background-color: #f9fafd;
+}
+#trade-section #card {
+  margin-top: -155px;
+  margin-bottom: 100px;
+  z-index: 5;
+  width: 60vw;
+  height: 371px;
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  border-radius: 16px;
+  filter: 0px 20px 200px rgba(57, 23, 119, 0.05);
+}
+#trade-section #card #input-section {
+  padding: 48px;
+}
+#trade-section #card #input-section input {
+  padding-bottom: 8px;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: black;
+}
+#trade-section #card #input-section input::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: black;
+}
+#trade-section #card #input-section select {
+  max-width: 200px;
+  width: 30%;
+  padding-bottom: 8px;
+  border: none;
+  outline: 0;
+  width: 30.66vw;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+#trade-section #card #input-section div:nth-child(3) {
+  height: 59px;
+  margin-left: 2px;
+}
+#trade-section #card #input-section div:nth-child(1) {
+  margin-right: 2px;
+  width: 55%;
+}
+#trade-section #card #estimation-section {
+  padding: 48px;
+  text-align: left;
+}
+#trade-section #card #estimation-section div {
+  margin-bottom: 16px;
+}
+#trade-section #card #estimation-section div:nth-child(1) {
+  color: #3671E9;
+  font-weight: 500;
+  font-size: 16px;
+}
+#trade-section #card #estimation-section div:nth-child(2) {
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+}
+#trade-section #card #estimation-section div:nth-child(2) span {
+  color: #3671E9;
+}
+#trade-section #card #estimation-section div:nth-child(3) {
+  font-size: 16px;
+  color: rgb(130, 130, 130);
+}
+#trade-section span {
+  width: 60vw;
 }
 #trade-section #currency-container {
   margin-bottom: 100px;
   width: 100%;
-  padding-inline: 6vw;
+  flex-wrap: wrap;
   margin-top: 64px;
 }
 #trade-section span {
@@ -324,7 +368,8 @@ nav li:hover {
 #trade-section .currency {
   padding: 48px;
   border-radius: 16px;
-  width: 370px;
+  width: 23vw;
+  min-width: 300px;
   flex-direction: column;
   background-color: white;
 }
@@ -378,7 +423,7 @@ nav li:hover {
   font-size: 16px;
 }
 #trade-section .start-button {
-  border: 2px solid rgba(43, 7, 110, 0.2);
+  border: 2px solid rgba(43, 7, 110, 0.5);
   height: 64px;
   width: 64px;
   background-color: white;
@@ -407,13 +452,27 @@ nav li:hover {
 }
 
 #market-section {
-  padding-left: 6vw;
+  z-index: 1;
+  padding-left: 10vw;
+  padding-right: 10vw;
   background-color: #2B076E;
   padding-top: 100px;
   text-align: center;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
+}
+#market-section #background-cercle {
+  width: 6vw;
+  height: 6vw;
+  min-width: 300px;
+  min-height: 300px;
+  left: 13vw;
+  top: -200px;
+  border-radius: 50%;
+  background-color: rgba(55, 20, 118, 0.4);
+  position: absolute;
 }
 #market-section h3 {
   margin-bottom: 100px;
@@ -437,7 +496,8 @@ nav li:hover {
   padding: 40px;
   background-color: #35068C;
   height: 298px;
-  max-width: 580px;
+  min-width: 500px;
+  width: 50vw;
   margin-left: 146px;
   border-radius: 16px;
   position: relative;
@@ -481,8 +541,13 @@ nav li:hover {
   color: rgb(66, 255, 255);
 }
 #market-section #graphiq-image {
-  max-width: 500px;
+  width: 100%;
   height: 136px;
+}
+#market-section #graphiq-image img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
 #market-section #progress-percent {
   border-radius: 16px;
@@ -543,7 +608,8 @@ nav li:hover {
 }
 #detailed-statistics-section #detailed-statistics-section-figure {
   position: relative;
-  max-width: 710px;
+  min-width: 600px;
+  width: 62vw;
 }
 #detailed-statistics-section #detailled-statistic-figure-header {
   padding-right: 100px;
@@ -685,15 +751,15 @@ nav li:hover {
 #grow-profit-section {
   position: relative;
   border-radius: 16px;
-  width: 100%;
   margin-top: 129px;
   margin-bottom: 129px;
-  padding-left: 120px;
-  padding-right: 120px;
 }
 #grow-profit-section #grow-profit-section-figure {
-  width: 610px;
+  margin-left: 110px;
+  min-width: 400px;
+  width: 53vw;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
   padding: 40px 0px 40px 0px;
   background-color: #35068C;
   border-radius: 16px;
@@ -703,8 +769,6 @@ nav li:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 16px 0px 16px 0px;
-  border: 1px solid red;
 }
 #grow-profit-section .grow-profit-section-figure-stat:nth-child(2) {
   width: 100%;
@@ -715,6 +779,9 @@ nav li:hover {
   margin-bottom: 24px;
   margin-top: 24px;
   align-items: center;
+}
+#grow-profit-section .bitcoin-logo {
+  margin-top: 35px;
 }
 #grow-profit-section .grow-profit-section-figure-logo {
   display: flex;
@@ -747,7 +814,6 @@ nav li:hover {
 }
 #grow-profit-section .grow-profit-section-figure-logo .currency-name div {
   color: #F2F2F2;
-  font-weight: 100 !important;
   font-size: 16px;
   margin-top: 8px;
 }
@@ -773,23 +839,24 @@ nav li:hover {
 #grow-profit-section .currency-details {
   text-align: left;
   margin-bottom: 14px;
+  font-weight: 400;
 }
 #grow-profit-section .currency-details span {
+  font-weight: 600;
   display: block !important;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #subscribe-section-container {
   height: 392px;
   width: 100%;
-  padding: 88px 120px 88px 120px;
   background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
 }
 
 #subscribe-section {
   background-color: #3671E9;
   height: 216px;
-  width: 1200px;
+  width: 83vw;
   padding: 48px;
   text-align: left;
   border-radius: 16px;
@@ -833,20 +900,22 @@ nav li:hover {
 
 footer {
   margin: 0px !important;
-  padding: 80px 120px 80px 120px;
+  padding: 80px 10vw 80px 10vw;
   background-color: #0D0D2B;
   font-family: "Rubik", sans-serif;
   text-align: left;
 }
+footer #footer-item-list-container {
+  display: flex;
+  align-items: center;
+}
 footer > div:first-child {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
 }
 footer .footer-item-list {
   width: 200px;
-}
-footer .footer-item-list:nth-child(2) {
-  margin-right: -200px;
 }
 footer .footer-item-list h6 {
   margin-top: 8px;
@@ -884,6 +953,10 @@ footer .footer-social-media div:nth-child(2) {
 }
 footer .footer-social-media i {
   color: white;
+}
+footer .footer-social-media i:hover {
+  color: #1181E8;
+  font-size: larger;
 }
 
 /*# sourceMappingURL=crappos.css.map */
