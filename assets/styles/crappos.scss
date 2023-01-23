@@ -5,6 +5,18 @@
     margin: 0;
     padding: 0;
 }
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-30px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 .flex-space{
     display: flex;
     align-items: center;
@@ -29,7 +41,7 @@
 }
 .big-size{
     font-family: 'Rubik', sans-serif;
-    font-size:40px ;
+    font-size: clamp(30px,30px + 1vw,40px) !important;
     line-height: 60px;
     font-weight: 700;
 }
@@ -43,6 +55,10 @@
     @extend .button;
     margin-top: 32px;
     width: 146px;
+    &:hover{
+        font-weight: bold !important;
+        width: 150px;
+    }
 }
 $global-padding:10vw;
 body{
@@ -157,7 +173,7 @@ nav{
 
 #quality{
     font-family: 'Rubik', sans-serif;
-    font-size: 64px;
+    font-size: clamp(50px, 35px + 3vw, 64px);
     line-height: 75.84px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -185,6 +201,7 @@ nav{
 }
 
 #illustration{
+    animation: float 3s ease-in-out infinite;
     width: clamp(500px,65vw,586px);
     min-width: 500px;
     height: auto;
@@ -253,6 +270,7 @@ nav{
     @extend .flex-space;
     width: 100%;
     #illustration-container{
+        animation: float 3s ease-in-out infinite;
         width: 650px;
         height: 473px;
         margin-right: 70px;
@@ -350,7 +368,7 @@ nav{
                 }
                 &:nth-child(2){
                     font-weight: 700;
-                    font-size: 32px;
+            font-size: clamp(26px,22px + 1vw,32px) !important;
                     color: black;
                     span{
                         color:#3671E9;
@@ -432,7 +450,7 @@ nav{
     .currency-name{
         color:#0D0D2B;
         font-family: 'Rubik', sans-serif;
-        font-size: 32px;
+            font-size: clamp(26px,22px + 1vw,32px) !important;
         font-weight: 700;
         display: flex;
         margin-bottom: 16px;
@@ -452,7 +470,9 @@ nav{
     }
 
     .start-button{
-        border: 2px solid rgba(43, 7, 110,0.5);
+        
+        animation: selectedButton 3s ease-in-out 2;
+        border: 2px solid rgba(43, 7, 110,0.3);
         @extend .flex-center;
         height: 64px;
         width: 64px;
@@ -466,9 +486,9 @@ nav{
     }
 
     .start-button-activated{
+        display: none;
         width: 205px;
         @extend .button;
-        display: flex;
         font-size: 18px;
         font-weight: 500;
         line-height: 150%;
@@ -874,7 +894,7 @@ nav{
             text-align: left;
             font-weight: 700;
             margin-left: 16px;
-            font-size: 32px;
+            font-size: clamp(26px,22px + 1vw,32px) !important;
             div{
                 color:#F2F2F2;
                 font-size: 16px;
@@ -1010,7 +1030,7 @@ footer{
    }
    #payment-section{
     font-weight: 500;
-    font-size: 32px;
+            font-size: clamp(26px,22px + 1vw,32px) !important;
     width: 355px;
     #payment-mode{
         @extend .flex-space;

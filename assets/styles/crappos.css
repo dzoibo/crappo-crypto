@@ -6,6 +6,17 @@
   padding: 0;
 }
 
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 .flex-space, footer .footer-social-media div:nth-child(2), footer .footer-social-media, footer #payment-section #payment-mode, #subscribe-section #subscribe-button, #subscribe-section, #grow-profit-section, #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button, #detailed-statistics-section #detailed-statistics-figure-header-2, #market-section #figure-header, #trade-section #currency-container, #trade-section #card #input-section, #why-section, #stat-section, #main-section, nav ul, #navigation, .logo, header, .flex-center, footer #payment-section #payment-mode div, #subscribe-section-container, #grow-profit-section .carret-container div, #grow-profit-section .grow-profit-section-figure-logo .logo-container, #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2), #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon, #trade-section .start-button, #trade-section .currency-logo, #trade-section .currency, #trade-section #card #input-section div:nth-child(3), #stat-section .stat-item-icon, #try-button div:nth-child(2), #try-button, #reduction div:nth-child(1), #login-section {
   display: flex;
   align-items: center;
@@ -34,7 +45,7 @@
 
 .big-size, #subscribe-section #subscribe-now-section div:nth-child(1), #trade-section span, #check-section div:first-child, #why-section #why-section-text div:nth-child(1), #stat-section .stat-item-amount {
   font-family: "Rubik", sans-serif;
-  font-size: 40px;
+  font-size: clamp(30px, 30px + 1vw, 40px) !important;
   line-height: 60px;
   font-weight: 700;
 }
@@ -49,6 +60,10 @@
 .learn-more-button {
   margin-top: 32px;
   width: 146px;
+}
+.learn-more-button:hover {
+  font-weight: bold !important;
+  width: 150px;
 }
 
 body {
@@ -153,7 +168,7 @@ nav li:hover {
 
 #quality {
   font-family: "Rubik", sans-serif;
-  font-size: 64px;
+  font-size: clamp(50px, 35px + 3vw, 64px);
   line-height: 75.84px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -178,6 +193,7 @@ nav li:hover {
 }
 
 #illustration {
+  animation: float 3s ease-in-out infinite;
   width: clamp(500px, 65vw, 586px);
   min-width: 500px;
   height: auto;
@@ -241,6 +257,7 @@ nav li:hover {
   width: 100%;
 }
 #why-section #illustration-container {
+  animation: float 3s ease-in-out infinite;
   width: 650px;
   height: 473px;
   margin-right: 70px;
@@ -345,7 +362,7 @@ nav li:hover {
 }
 #trade-section #card #estimation-section div:nth-child(2) {
   font-weight: 700;
-  font-size: 32px;
+  font-size: clamp(26px, 22px + 1vw, 32px) !important;
   color: black;
 }
 #trade-section #card #estimation-section div:nth-child(2) span {
@@ -407,7 +424,7 @@ nav li:hover {
 #trade-section .currency-name {
   color: #0D0D2B;
   font-family: "Rubik", sans-serif;
-  font-size: 32px;
+  font-size: clamp(26px, 22px + 1vw, 32px) !important;
   font-weight: 700;
   display: flex;
   margin-bottom: 16px;
@@ -425,7 +442,8 @@ nav li:hover {
   font-size: 16px;
 }
 #trade-section .start-button {
-  border: 2px solid rgba(43, 7, 110, 0.5);
+  animation: selectedButton 3s ease-in-out 2;
+  border: 2px solid rgba(43, 7, 110, 0.3);
   height: 64px;
   width: 64px;
   background-color: white;
@@ -436,8 +454,8 @@ nav li:hover {
   color: #3671E9;
 }
 #trade-section .start-button-activated {
+  display: none;
   width: 205px;
-  display: flex;
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
@@ -812,7 +830,7 @@ nav li:hover {
   text-align: left;
   font-weight: 700;
   margin-left: 16px;
-  font-size: 32px;
+  font-size: clamp(26px, 22px + 1vw, 32px) !important;
 }
 #grow-profit-section .grow-profit-section-figure-logo .currency-name div {
   color: #F2F2F2;
@@ -935,7 +953,7 @@ footer .footer-item-list div :hover {
 }
 footer #payment-section {
   font-weight: 500;
-  font-size: 32px;
+  font-size: clamp(26px, 22px + 1vw, 32px) !important;
   width: 355px;
 }
 footer #payment-section #payment-mode {
