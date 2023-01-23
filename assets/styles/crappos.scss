@@ -185,7 +185,7 @@ nav{
 }
 
 #illustration{
-    width: 65vw;
+    width: clamp(500px,65vw,586px);
     min-width: 500px;
     height: auto;
     max-height: 585px;
@@ -220,9 +220,11 @@ nav{
     margin-bottom: 100px;
     @extend .flex-space;
     .stat-item{
+        align-items: center;
         width: 334px;
         height: 92px;
-        @extend .flex-center
+        display: flex;
+        justify-content: flex-start;
     }
     .stat-item-icon{
         background-color: #252540;
@@ -290,14 +292,14 @@ nav{
         margin-bottom: 100px;
         z-index: 5;
         width: 60vw;
-        height: 371px;
+        padding:48px;
         background-color: white;
         font-family: 'Rubik', sans-serif;
         border-radius: 16px;
         filter:(0px 20px 200px rgba(57, 23, 119, 0.05));
         #input-section{
             @extend .flex-space;
-            padding:48px;
+            margin-bottom: 100px;
             input{
                 padding-bottom: 8px;
                 border:none;
@@ -338,7 +340,6 @@ nav{
             }
         }
         #estimation-section{
-            padding:48px;
             text-align: left;
             div{
                 margin-bottom: 16px;
@@ -922,7 +923,7 @@ nav{
 }
 #subscribe-section{
     background-color: #3671E9;
-    height: 216px;
+    min-height: 216px;
     width: 83vw;
     padding: 48px;
     text-align: left;
@@ -1038,4 +1039,70 @@ footer{
         font-size: larger;
     }
    }
+}
+@media (max-width:1000px){
+    #grow-profit-section,#main-section,#stat-section,#invest-smart-section,#why-section{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    .market-section-explanation{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        display: flex;
+        flex-direction:column;
+        text-align: center !important;
+        justify-content: center;
+        align-items: center;
+    }
+    #detailed-statistics-section{
+        flex-wrap: wrap-reverse;
+        justify-content: center !important;
+    }
+    #login-section{
+        left: 10vw ;
+        position: absolute;
+        margin-left: 30px;
+        top:150px
+    }
+    #stat-section,#illustration{
+        margin-bottom: 0px;
+    }
+    .stat-item{
+        margin-bottom: 24px;
+    }
+    
+    #illustration-container{
+        margin-bottom: 24px;
+    }
+    #currency-container{
+        justify-content: center !important;
+        .currency{
+            margin-bottom: 24px;
+        }
+    }
+    #invest-smart-section-figure,#detailed-statistics-section-figure,#grow-profit-section-figure{
+        margin-left: 0px !important;
+        margin-top: 50px ;
+    }
+    #payment-section{
+        margin-top: 50px;
+    }
+    #subscribe-section{
+        width: 492px !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        #subscribe-button{
+            margin-top: 50px;
+            width: 375px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            div{
+                margin-top: 50px;
+            }
+        }
+    }
 }
