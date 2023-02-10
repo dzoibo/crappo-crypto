@@ -69,6 +69,7 @@
 body {
   color: white;
   position: relative;
+  transition-delay: 0.5;
 }
 
 #first-page {
@@ -89,6 +90,9 @@ header {
   padding-right: 10vw;
   width: 100%;
 }
+header i {
+  display: none !important;
+}
 
 .logo {
   height: 40px;
@@ -105,17 +109,32 @@ header {
   width: auto;
 }
 
+#back-drop {
+  background-color: rgba(0, 0, 0, 0.631372549);
+  display: none;
+  z-index: 10;
+  width: 100vh;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  transition-delay: 0.5;
+}
+
 #side-menu {
+  font-family: "Rubik", sans-serif;
   border: 1px solid black;
   z-index: 100;
   position: fixed;
   background-color: #0D0D2B;
-  width: 75vw;
-  height: calc(100vh - 1px);
+  width: 0vw;
+  overflow-x: hidden;
+  height: 100vh;
+  transition: 0.3s ease-out;
 }
 #side-menu nav {
   top: 50%;
   position: absolute;
+  transform: translateY(-50%);
 }
 #side-menu ul {
   width: 100%;
@@ -125,8 +144,9 @@ header {
 }
 #side-menu li {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   justify-content: center;
+  transition: 0.1s ease-in;
 }
 #side-menu .logo {
   padding-left: 20px;
@@ -137,6 +157,7 @@ header {
   right: 15px;
   top: 20px;
   font-size: 24px;
+  cursor: pointer;
 }
 #side-menu .login-section {
   position: absolute;
@@ -165,6 +186,7 @@ nav ul {
 nav li:hover {
   color: #3671E9;
   cursor: pointer;
+  font-size: 1.2em;
 }
 
 .login-section {
@@ -493,7 +515,6 @@ nav li:hover {
   font-size: 16px;
 }
 #trade-section .start-button {
-  animation: selectedButton 3s ease-in-out 2;
   border: 2px solid rgba(43, 7, 110, 0.3);
   height: 64px;
   width: 64px;
@@ -505,21 +526,41 @@ nav li:hover {
   color: #3671E9;
 }
 #trade-section .start-button-activated {
-  display: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 205px;
+  background-color: transparent !important;
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
+}
+#trade-section .start-button-activated div:first-child {
+  display: none;
+  transition: 0.4s ease-in;
+}
+#trade-section .start-button-activated div:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 0.3s ease-out;
+}
+#trade-section .start-button-activated:hover {
+  background-color: inherit;
+  justify-content: space-between;
   padding: 16px 16px 16px 24px;
+  background-color: #3671E9 !important;
 }
-#trade-section .start-button-activated .start-button {
-  border: none;
-  height: 32px;
-  width: 32px;
-  margin-left: 24px;
+#trade-section .start-button-activated:hover div:first-child {
+  display: block;
 }
-#trade-section .start-button-activated .start-button i {
-  font-size: small;
+#trade-section .start-button-activated:hover div:nth-child(2) {
+  transform: translateX(100%) translateY(-50%);
+  border: 1px solid rgba(43, 7, 110, 0.3);
+  height: 40px;
+  width: 40px;
 }
 
 #market-section {
@@ -1088,8 +1129,13 @@ footer .footer-social-media i:hover {
   #subscribe-section #subscribe-button div {
     margin-top: 50px;
   }
-  #navigation nav {
+  #navigation {
     display: none;
+  }
+  header i {
+    cursor: pointer;
+    display: block !important;
+    font-size: 32px;
   }
 }
 

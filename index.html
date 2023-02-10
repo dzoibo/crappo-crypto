@@ -19,6 +19,7 @@
                     CRAPPO
                 </div>
             </div>
+            <i id="side-menu-button" class="fa-solid fa-bars"></i>
             <div id="navigation">
                 <nav id="horizontal-nav">
                     <ul>
@@ -53,7 +54,7 @@
                     <li>Contact</li>
                 </ul>
             </nav>
-            <i class="fa-solid fa-xmark"></i>
+            <i id="bt-close-menu" class="fa-solid fa-xmark"></i>
 
             <div class="login-section">
                 <div>Login</div>
@@ -194,15 +195,12 @@
                         Digital currency in which a record of transactions is maintained.
                     </div>
                     <div class="start-button-activated">
-                        Start mining 
+                         <div> Start mining </div>
                         <div class="start-button">
                             <i class="fa-solid fa-angle-right"></i>
                         </div>
                     </div>
                     
-                    <div class="start-button">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
                 </div>
                 <div class="currency">
                     <div class="currency-logo" id="eth">
@@ -215,9 +213,12 @@
                     <div class="currency-description">
                         Blockchain technology to create and run decentralized digital applications.
                     </div>
-                    <div class="start-button">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
+                    <div class="start-button-activated">
+                        <div> Start mining </div>
+                       <div class="start-button">
+                           <i class="fa-solid fa-angle-right"></i>
+                       </div>
+                   </div>
                 </div>
                 <div class="currency">
                     <div class="currency-logo" id="ltc">
@@ -232,9 +233,12 @@
                     <div class="currency-description">
                         Cryptocurrency that enables instant payments to anyone in the world.
                     </div>
-                    <div class="start-button">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
+                    <div class="start-button-activated">
+                        <div> Start mining </div>
+                       <div class="start-button">
+                           <i class="fa-solid fa-angle-right"></i>
+                       </div>
+                   </div>
                 </div>
             </div>
          </div>
@@ -534,5 +538,22 @@
             </div>
             
         </footer>
+        <div id="back-drop"></div>
     </body>
+    <script >
+        var button=document.getElementById("side-menu-button");
+        button.addEventListener('click',()=>{
+            document.getElementById('side-menu').style.width="300px";
+            document.getElementById('back-drop').style.display="block";
+            document.querySelector('body').style.overflow="hidden";
+            
+        });
+        var closeButton= document.getElementById("bt-close-menu");
+        closeButton.addEventListener('click',()=>{
+            document.getElementById('side-menu').style.width="0px";
+            document.getElementById('back-drop').style.display="none";
+            document.querySelector('body').style.overflow="auto";
+
+        })
+    </script>
 </html>
