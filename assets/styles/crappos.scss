@@ -769,7 +769,7 @@ nav{
     #detailed-statistics-section-figure{
         position: relative;
         min-width: 600px;
-        width: 62vw;
+        width: 70vw;
     }
     #detailled-statistic-figure-header{
         
@@ -1035,7 +1035,6 @@ nav{
 }
 
 #subscribe-section-container{
-    height: 392px;
     width: 100%;
     @extend .flex-center;
     background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
@@ -1326,7 +1325,7 @@ footer{
         #detailed-statistics-section-figure{
             position: relative;
             min-width: 0px;
-            width: 62vw;
+            width: 70vw;
         }
         #detailled-statistic-figure-header{
             flex-wrap: wrap;
@@ -1355,6 +1354,8 @@ footer{
                     font-size: 10px;
                 }
                 &:nth-child(5){
+                    width: 100%;
+                    justify-content: center;
                     #avatar{
                         margin-top: 8px;
                         width: 40px;
@@ -1372,6 +1373,7 @@ footer{
             }
         }
         #detailed-statistics-figure-header-2{
+        padding: 8px 8px 4px 8px;
             display: flex;
             flex-wrap: wrap;
             #symbol{
@@ -1423,4 +1425,34 @@ footer{
             } 
         }
     }
+}
+@media (max-width:380px){
+    #subscribe-section #subscribe-now-section div:nth-child(1){
+        font-size: 24px !important;
+        line-height: 30px;
+    }
+    #grow-profit-section-figure{
+        width: 95% !important;
+        .grow-profit-section-figure-stat:nth-child(2){
+            margin-left: -24px;
+        }
+        .logo-container,img{
+            width: 20px !important;
+            height: 20px!important;
+            i{
+                font-size: small !important;
+            }
+        }
+    }
+    #background-cercle{
+        display: none;
+    }
+    #payment-mode{
+        div{
+            width: 60px !important;
+            height: auto !important;
+        }
+
+    }
+
 }
