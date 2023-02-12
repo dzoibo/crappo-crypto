@@ -33,7 +33,7 @@
 }
 .illustration-img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: fill;
 }
 .neutral-gray{
@@ -147,12 +147,13 @@ header{
     }
     .logo{
         padding-left: 20px;
-        margin-top: 15px;
+        padding-top: 60px;
+
     }
     i{
         position: absolute;
         right: 15px;
-        top: 20px;
+        top: 50px;
         font-size: 24px;
         cursor: pointer;
     }
@@ -275,7 +276,7 @@ nav{
 
 #illustration{
     animation: float 3s ease-in-out infinite;
-    width: clamp(500px,65vw,586px);
+    width: clamp(100px,65vw,586px);
     min-width: 500px;
     height: auto;
     max-height: 585px;
@@ -992,7 +993,7 @@ nav{
             text-align: left;
             font-weight: 700;
             margin-left: 16px;
-            font-size: clamp(26px,22px + 1vw,32px) !important;
+            font-size: clamp(26px,22px + 1vw,32px) ;
             div{
                 color:#F2F2F2;
                 font-size: 16px;
@@ -1068,7 +1069,7 @@ nav{
         caret-color: white;
         @extend .small-rubik;
         color: white;
-        width: 375px;
+        width: 100%;
         border: none;
         border-bottom:1px solid rgba(224, 224, 224, 1);
         padding-bottom: 8px;
@@ -1225,6 +1226,201 @@ footer{
     header i{
         cursor: pointer;
         display: block !important;
-        font-size: 32px;
+        font-size: 24px;
+    }
+    #illustration{
+        min-width: 0px;
+    }
+    #illustration-container{
+        height: auto !important;
+    }
+}
+
+
+@media (max-width:550px){
+    #grow-profit-section-figure{
+        font-size: 0.7em;
+        min-width: 0px !important;
+        .currency-name{
+            font-size: 16px !important;
+            div{
+                font-size: 14px !important;
+            }
+        }
+    }
+    .logo{
+        margin-bottom: 32px;
+    }
+    footer{
+        display: flex !important;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &>div:first-child{
+            flex-wrap: nowrap;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+       } 
+        #footer-item-list-container{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+       
+    }
+    #payment-section{
+        text-align: center;
+    }
+    .footer-social-media{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        div{
+            margin-bottom: 16px;
+        }
+    }
+    #subscribe-section{
+        width: 75% !important;
+        #subscribe-button{
+            div{
+                margin-left: 0px;
+            }
+        }
+    }
+    #input-section{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-bottom: 100px;
+
+         select{
+             margin-bottom: 16px !important;
+             width: 100% !important;
+         }
+         div:nth-child(3){
+             height: 59px;
+             margin-left: 2px;
+         }
+         div:nth-child(1){
+            margin-bottom: 16px;
+             margin-right: 2px;
+             width: 100% !important;
+         }
+     }
+     #invest-smart-section-figure{
+        min-width: 300px !important;
+        #price{
+            display: none;
+        }
+    }
+
+    #detailed-statistics-section{
+        display: flex;
+        .detailed-statistics-session{
+            margin-left: 91px;
+        }
+        #detailed-statistics-section-figure{
+            position: relative;
+            min-width: 0px;
+            width: 62vw;
+        }
+        #detailled-statistic-figure-header{
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            #trends{
+                #trends-icon{
+                    font-size: xx-small;
+                    border-radius: 50%;
+                }
+                #trends-percent{
+                    div:nth-child(1){
+                        font-size: 14px;
+                    }
+                    div:nth-child(2){
+                        font-size: 12px;
+                    }
+                }
+            }
+            .detailled-statistic-item{
+                div:nth-child(1){
+                    font-size: 12px;
+                }
+                div:nth-child(2){
+                    font-size: 10px;
+                }
+                &:nth-child(5){
+                    #avatar{
+                        margin-top: 8px;
+                        width: 40px;
+                        height: 40px;
+                        img{
+                            border-radius: 50%;
+                        }
+                    }
+                    #avatar-name{
+                        div:nth-child(2){
+                            color: #6edcb5;
+                        }
+                    }
+                }
+            }
+        }
+        #detailed-statistics-figure-header-2{
+            display: flex;
+            flex-wrap: wrap;
+            #symbol{
+                div:nth-child(1){
+                    font-size: 14px;
+                }
+                div:nth-child(2){
+                    font-size: xx-small;
+                }
+            }
+            #buy-sell-button{
+                margin-top: 16px;
+                div{
+                    font-size: 12px !important;
+                }
+                div:nth-child(1){
+                    background-color: #6edcb5;
+                    margin-right: 24px;
+                }
+                div:nth-child(2){
+                    background-color: #ff325f;
+                } 
+            }
+        }
+        #detailed-statistics-figure{
+            height: auto;
+        }
+        #last-price{
+            margin-right: 50px ;
+        }
+        .detailed-statistics-figure-header-2-item{
+            width: auto !important;
+            flex-wrap: wrap;
+            position: relative;
+            div:nth-child(1){
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            div:nth-child(2){
+                @extend .neutral-gray;
+                font-size: 10px;
+            } 
+            div:nth-child(3){
+                color: #42ffff;
+                top: 50%;
+                left: 60px;
+                position:absolute;
+                transform: translateY(-50%) ;
+            } 
+        }
     }
 }

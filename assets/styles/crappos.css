@@ -35,7 +35,7 @@
 
 .illustration-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: fill;
 }
 
@@ -150,12 +150,12 @@ header i {
 }
 #side-menu .logo {
   padding-left: 20px;
-  margin-top: 15px;
+  padding-top: 60px;
 }
 #side-menu i {
   position: absolute;
   right: 15px;
-  top: 20px;
+  top: 50px;
   font-size: 24px;
   cursor: pointer;
 }
@@ -267,7 +267,7 @@ nav li:hover {
 
 #illustration {
   animation: float 3s ease-in-out infinite;
-  width: clamp(500px, 65vw, 586px);
+  width: clamp(100px, 65vw, 586px);
   min-width: 500px;
   height: auto;
   max-height: 585px;
@@ -922,7 +922,7 @@ nav li:hover {
   text-align: left;
   font-weight: 700;
   margin-left: 16px;
-  font-size: clamp(26px, 22px + 1vw, 32px) !important;
+  font-size: clamp(26px, 22px + 1vw, 32px);
 }
 #grow-profit-section .grow-profit-section-figure-logo .currency-name div {
   color: #F2F2F2;
@@ -987,7 +987,7 @@ nav li:hover {
 #subscribe-section input {
   caret-color: white;
   color: white;
-  width: 375px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid rgb(224, 224, 224);
   padding-bottom: 8px;
@@ -1135,7 +1135,182 @@ footer .footer-social-media i:hover {
   header i {
     cursor: pointer;
     display: block !important;
-    font-size: 32px;
+    font-size: 24px;
+  }
+  #illustration {
+    min-width: 0px;
+  }
+  #illustration-container {
+    height: auto !important;
+  }
+}
+@media (max-width: 550px) {
+  #grow-profit-section-figure {
+    font-size: 0.7em;
+    min-width: 0px !important;
+  }
+  #grow-profit-section-figure .currency-name {
+    font-size: 16px !important;
+  }
+  #grow-profit-section-figure .currency-name div {
+    font-size: 14px !important;
+  }
+  .logo {
+    margin-bottom: 32px;
+  }
+  footer {
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer > div:first-child {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer #footer-item-list-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  #payment-section {
+    text-align: center;
+  }
+  .footer-social-media {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .footer-social-media div {
+    margin-bottom: 16px;
+  }
+  #subscribe-section {
+    width: 75% !important;
+  }
+  #subscribe-section #subscribe-button div {
+    margin-left: 0px;
+  }
+  #input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+  }
+  #input-section select {
+    margin-bottom: 16px !important;
+    width: 100% !important;
+  }
+  #input-section div:nth-child(3) {
+    height: 59px;
+    margin-left: 2px;
+  }
+  #input-section div:nth-child(1) {
+    margin-bottom: 16px;
+    margin-right: 2px;
+    width: 100% !important;
+  }
+  #invest-smart-section-figure {
+    min-width: 300px !important;
+  }
+  #invest-smart-section-figure #price {
+    display: none;
+  }
+  #detailed-statistics-section {
+    display: flex;
+  }
+  #detailed-statistics-section .detailed-statistics-session {
+    margin-left: 91px;
+  }
+  #detailed-statistics-section #detailed-statistics-section-figure {
+    position: relative;
+    min-width: 0px;
+    width: 62vw;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-icon {
+    font-size: xx-small;
+    border-radius: 50%;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-percent div:nth-child(1) {
+    font-size: 14px;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header #trends #trends-percent div:nth-child(2) {
+    font-size: 12px;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item div:nth-child(1) {
+    font-size: 12px;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item div:nth-child(2) {
+    font-size: 10px;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar {
+    margin-top: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar img {
+    border-radius: 50%;
+  }
+  #detailed-statistics-section #detailled-statistic-figure-header .detailled-statistic-item:nth-child(5) #avatar-name div:nth-child(2) {
+    color: #6edcb5;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(1) {
+    font-size: 14px;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #symbol div:nth-child(2) {
+    font-size: xx-small;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button {
+    margin-top: 16px;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button div {
+    font-size: 12px !important;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button div:nth-child(1) {
+    background-color: #6edcb5;
+    margin-right: 24px;
+  }
+  #detailed-statistics-section #detailed-statistics-figure-header-2 #buy-sell-button div:nth-child(2) {
+    background-color: #ff325f;
+  }
+  #detailed-statistics-section #detailed-statistics-figure {
+    height: auto;
+  }
+  #detailed-statistics-section #last-price {
+    margin-right: 50px;
+  }
+  #detailed-statistics-section .detailed-statistics-figure-header-2-item {
+    width: auto !important;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #detailed-statistics-section .detailed-statistics-figure-header-2-item div:nth-child(1) {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  #detailed-statistics-section .detailed-statistics-figure-header-2-item div:nth-child(2) {
+    font-size: 10px;
+  }
+  #detailed-statistics-section .detailed-statistics-figure-header-2-item div:nth-child(3) {
+    color: #42ffff;
+    top: 50%;
+    left: 60px;
+    position: absolute;
+    transform: translateY(-50%);
   }
 }
 
