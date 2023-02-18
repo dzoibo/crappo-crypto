@@ -541,6 +541,12 @@
         <div id="back-drop"></div>
     </body>
     <script >
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9LYCZKEKBQ');
+
         var button=document.getElementById("side-menu-button");
         button.addEventListener('click',()=>{
             document.getElementById('side-menu').style.width="300px";
