@@ -146,7 +146,6 @@ header i {
   display: block;
   margin-bottom: 30px;
   justify-content: center;
-  transition: 0.1s ease-in;
 }
 #side-menu .logo {
   padding-left: 20px;
@@ -182,6 +181,10 @@ nav ul {
   width: 100%;
   list-style-type: none;
   cursor: pointer;
+}
+nav li {
+  transition-duration: 0.3s;
+  transition-property: color, font-size;
 }
 nav li:hover {
   color: #3671E9;
@@ -535,17 +538,18 @@ nav li:hover {
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
+  transition: 0.5s ease-out 0.1s;
 }
 #trade-section .start-button-activated div:first-child {
-  display: none;
-  transition: 0.4s ease-in;
+  opacity: 0;
+  transition: 0.3s ease-in 0.4s;
 }
 #trade-section .start-button-activated div:nth-child(2) {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  transition: 0.3s ease-out;
+  transition: 0.6s ease-out;
 }
 #trade-section .start-button-activated:hover {
   background-color: inherit;
@@ -554,7 +558,7 @@ nav li:hover {
   background-color: #3671E9 !important;
 }
 #trade-section .start-button-activated:hover div:first-child {
-  display: block;
+  opacity: 1;
 }
 #trade-section .start-button-activated:hover div:nth-child(2) {
   transform: translateX(100%) translateY(-50%);
@@ -1064,6 +1068,7 @@ footer .footer-social-media div:nth-child(2) {
 }
 footer .footer-social-media i {
   color: white;
+  transition: 0.3s ease-out;
 }
 footer .footer-social-media i:hover {
   color: #1181E8;
